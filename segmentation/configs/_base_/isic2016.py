@@ -1,3 +1,4 @@
+# Please copy isic2016.py, isic2017.py, and isic2018.py and past in `segmentation\mmsegmentation\configs\_base_\datasets`
 # dataset settings
 dataset_type = 'ISIC2016Dataset'
 data_root = 'data/isic2016/'
