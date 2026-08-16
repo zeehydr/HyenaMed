@@ -2,7 +2,7 @@
 
 **HyenaPixel** is a lightweight vision architecture designed for efficient medical image analysis. This repository contains the implementation and experimental configurations for **skin lesion segmentation** using HyenaPixel with the **SegFormer** decoder and MMSegmentation framework.
 
-The experiments are primarily conducted on the **ISIC 2016** and **ISIC 2017** skin lesion segmentation datasets.
+The experiments are primarily conducted on the **ISIC 2016**, **ISIC 2017** and **ISIC 2018** skin lesion segmentation datasets.
 
 ---
 
@@ -118,6 +118,7 @@ The experiments use skin lesion segmentation datasets including:
 
 - ISIC 2016
 - ISIC 2017
+- ISIC 2018
 
 The dataset paths should be configured inside the corresponding MMSegmentation configuration files.
 
@@ -182,16 +183,6 @@ mmsegmentation/configs/hpx_former_s18/segformer_hpx-former-s18-90k_isic2017-224x
 
 ---
 
-## LRASPP Head
-
-An alternative lightweight decoder can also be trained using:
-
-```bash
-python mmsegmentation/tools/train.py \
-mmsegmentation/configs/hpx_former_s18/lraspphead_hpx-former-s18-90k_isic2016-224x224.py
-```
-
----
 
 # 🧪 Testing
 
@@ -369,22 +360,6 @@ After commenting the line, run the Grad-CAM visualization script normally.
 
 ---
 
-# 🔬 Fast-SCNN Baseline
-
-Fast-SCNN can be evaluated as a lightweight baseline.
-
-For example:
-
-```bash
-python mmsegmentation/tools/test.py \
-mmsegmentation/configs/fastscnn/fast_scnn_8xb4-90k_isic2016-256x256.py \
-work_dirs/fast_scnn_8xb4-90k_isic2016-256x256/iter_40000.pth
-```
-
-This allows HyenaPixel to be compared against another lightweight semantic segmentation architecture.
-
----
-
 # 📁 Output Directories
 
 Training checkpoints are normally stored under:
@@ -521,15 +496,17 @@ work_dirs/segformer_hpx-former-s18-90k_isic2016-256x256/iter_90000.pth
 If you find this repository useful for your research, please cite the corresponding HyenaPixel/HyenaMed publication.
 
 ```bibtex
-@inproceedings{hyenamed2026,
-  title     = {HyenaMed: Lightweight Skin Lesion Segmentation via Convolutional Global Context Modeling},
-  year      = {2026},
-  booktitle = {Future Engineering and Technology Conference (FET)}
-}
+@INPROCEEDINGS{11601590,
+  author={Haider, Zeeshan and Haiyu, Huang and Butt, Muhammad Adnan Farooq and Ali, Muqadar},
+  booktitle={2026 International Conference on Frontiers of Engineering and Emerging Technologies (FET)}, 
+  title={HyenaMed: Lightweight Skin Lesion Segmentation via Convolutional Global Context Modeling}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-7},
+  keywords={Modeling;Lesions;Dies;Printing;Skin;Tagging;Convolution;Training;Decoding;Equations;Skin Lesion Segmentation;Lightweight Model;Convolutional Neural Networks;Multilayer Perceptrons},
+  doi={10.1109/FET68771.2026.11601590}}
 ```
-
-Please update the BibTeX entry with the final author list, DOI, and publication metadata once the official IEEE Xplore record is available.
-
 ---
 
 # 🙏 Acknowledgements
