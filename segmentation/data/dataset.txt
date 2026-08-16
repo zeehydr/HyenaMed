@@ -1,0 +1,14 @@
+Put ISIC2016, ISIC2017, and ISIC2018 datasets here:
+
+segmentation/data/
+├── isic2016/
+│   ├── images/
+│   │   ├── training/
+│   │   └── validation/
+│   └── annotations/
+│       ├── training/
+│       └── validation/
+├── isic2017/
+│   └── ...
+└── isic2018/
+    └── ...
